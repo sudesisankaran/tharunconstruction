@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tharun Construction</title>
+  <link rel="icon" type="image/png" href="images/Tharun logo (1).png">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS v3 via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#2F4D6D',
+            'secondary': '#0070B8',
+            'tertiary': '#03A7E0',
+            'accent': '#F4BF1B',
+            'dark-grey': '#665B5B',
+            'light-grey': '#F4F4F4'
+          },
+          fontFamily: {
+            'heading': ['Inter', 'sans-serif'],
+            'body': ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-body text-dark-grey bg-white">
+
+  <!-- Header -->
+  <header class="bg-white pt-10 pb-6 border-b border-gray-200">
+    <div class="container mx-auto px-4 flex flex-col items-center">
+      <a href="index.html" class="flex flex-col items-center justify-center gap-2 mb-6 hover:opacity-80 transition-opacity text-center">
+        <img src="images/Tharun logo (1).png" alt="Tharun Construction Logo" class="h-20 sm:h-24 md:h-32 object-contain">
+        <div class="flex flex-col items-center justify-center gap-1 mt-2 w-32 sm:w-48 md:w-64">
+          <img src="images/Tharun logo (2).png" alt="THARUN" class="w-full h-auto object-contain">
+          <img src="images/Tharun logo (3).png" alt="CONSTRUCTION" class="w-full h-auto object-contain">
+        </div>
+      </a>
+      <nav class="flex flex-wrap justify-center gap-4 md:gap-8 px-2 text-center">
+        <a href="index.html" class="font-heading text-sm font-semibold text-dark-grey uppercase hover:text-accent border-b-2 border-transparent hover:border-accent transition duration-300">Home</a>
+        <a href="about.html" class="font-heading text-sm font-semibold text-dark-grey uppercase hover:text-accent border-b-2 border-transparent hover:border-accent transition duration-300">About Us</a>
+        <a href="contact.html" class="font-heading text-sm font-semibold text-dark-grey uppercase hover:text-accent border-b-2 border-transparent hover:border-accent transition duration-300">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+  <!-- Page Header -->
+  <section class="bg-primary text-white py-20 text-center">
+    <h1 class="font-heading text-4xl md:text-5xl font-bold uppercase tracking-widest">CONTACT US</h1>
+  </section>
+<!-- Contact Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row gap-12">
+      
+      <!-- Contact Form -->
+      <div class="flex-1">
+        <h2 class="font-heading text-3xl md:text-4xl text-left text-dark-grey mb-8 uppercase">CONTACT US</h2>
+        <form class="flex flex-col gap-5">
+          <input type="text" placeholder="Name" class="w-full p-4 border border-gray-300 focus:outline-none focus:border-primary font-body">
+          <input type="email" placeholder="Email*" class="w-full p-4 border border-gray-300 focus:outline-none focus:border-primary font-body" required>
+          <input type="tel" placeholder="Phone" class="w-full p-4 border border-gray-300 focus:outline-none focus:border-primary font-body">
+          <textarea placeholder="Tell us about your project..." class="w-full p-4 border border-gray-300 focus:outline-none focus:border-primary font-body min-h-[150px] resize-y"></textarea>
+          
+          <label class="flex items-center gap-2 cursor-pointer w-fit">
+            <input type="file" class="hidden">
+            <span class="text-accent font-semibold">+ Attach Files</span>
+          </label>
+          
+          <button type="submit" class="bg-primary text-white font-heading text-sm font-semibold uppercase tracking-widest py-3 px-8 border border-primary hover:bg-transparent hover:text-primary transition duration-300 w-fit mt-2">SEND</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="flex-1 p-10 flex flex-col justify-center">
+        <h3 class="font-heading text-2xl text-primary mb-5 uppercase">PROJECT INQUIRIES</h3>
+        <p class="text-dark-grey mb-8 leading-relaxed">
+          Ready to start your next remodeling project? Contact us today for a consultation. 
+          Our team of experts is here to help you bring your vision to life.
+        </p>
+        
+        <div class="mb-6">
+          <h4 class="font-heading text-lg mb-2 uppercase font-semibold">THARUN CONSTRUCTION</h4>
+          <p class="text-dark-grey font-semibold mb-1">Prop. - THARUNPATHY</p>
+          <p class="text-dark-grey mb-2 leading-relaxed">3/153, Azad Nagar, Adjacent to Bharat Wayment,<br>Bangalore Highway, Krishnagiri - 02.</p>
+          <p class="text-dark-grey text-sm italic mt-2">Company started at aprox July 2022</p>
+        </div>
+        
+        <div class="mt-8 bg-white rounded-2xl p-6 shadow-md border-l-8 border-accent">
+          <div class="flex items-center gap-4 mb-4 pb-4 border-b border-gray-200">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent text-xl shadow-sm">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div>
+              <strong class="font-heading text-sm text-dark-grey uppercase tracking-widest block mb-1">Mobile / WhatsApp</strong>
+              <a href="tel:+919177933880" class="text-accent font-extrabold text-xl hover:underline tracking-wider">+91 91779 33880</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent text-xl shadow-sm">
+              <i class="fa-solid fa-envelope-open-text"></i>
+            </div>
+            <div>
+              <strong class="font-heading text-sm text-dark-grey uppercase tracking-widest block mb-1">Email</strong>
+              <a href="mailto:tharunconstruction05@gmail.com" class="text-accent font-bold text-lg hover:underline break-all">tharunconstruction05@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+<!-- Footer -->
+  <footer class="bg-dark-grey text-white">
+    <div class="container mx-auto px-4 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        
+        <!-- Location -->
+        <div class="md:col-span-2">
+          <h4 class="font-heading text-lg text-accent mb-5 uppercase tracking-widest">LOCATION</h4>
+          <div class="w-full h-64 bg-white">
+            <iframe 
+              src="https://www.google.com/maps?q=3/153,+Azad+Nagar,+Bangalore+Highway,+Krishnagiri&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Subscribe -->
+        <div>
+          <h4 class="font-heading text-lg text-accent mb-5 uppercase tracking-widest">SUBSCRIBE & FOLLOW</h4>
+          <div class="flex flex-col gap-3">
+            <a href="https://www.youtube.com/@tharunconstruction" target="_blank" class="bg-red-600 text-white font-heading text-sm font-semibold uppercase tracking-widest py-3 px-6 hover:bg-white hover:text-red-600 transition duration-300 flex items-center justify-center gap-2 shadow-md">
+              <i class="fa-brands fa-youtube text-lg"></i> SUBSCRIBE
+            </a>
+            <a href="https://www.instagram.com/tharunconstruction" target="_blank" class="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white font-heading text-sm font-semibold uppercase tracking-widest py-3 px-6 hover:opacity-90 transition duration-300 flex items-center justify-center gap-2 shadow-md">
+              <i class="fa-brands fa-instagram text-lg"></i> FOLLOW US
+            </a>
+            <a href="https://www.facebook.com/share/1EVgXoDYcm/" target="_blank" class="bg-[#1877F2] text-white font-heading text-sm font-semibold uppercase tracking-widest py-3 px-6 hover:opacity-90 transition duration-300 flex items-center justify-center gap-2 shadow-md">
+              <i class="fa-brands fa-facebook text-lg"></i> LIKE US
+            </a>
+          </div>
+        </div>
+
+        <!-- Follow Us -->
+        <div>
+          <h4 class="font-heading text-lg text-accent mb-5 uppercase tracking-widest">FOLLOW US</h4>
+          <div class="flex gap-4 text-xl">
+            <a href="https://wa.me/919177933880" target="_blank" class="hover:text-accent transition duration-300"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:+919177933880" class="hover:text-accent transition duration-300"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://www.instagram.com/tharunconstruction" class="hover:text-accent transition duration-300"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1EVgXoDYcm/" target="_blank" class="hover:text-accent transition duration-300"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.youtube.com/@tharunconstruction" class="hover:text-accent transition duration-300"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="bg-primary py-5 text-center text-sm text-light-grey">
+      <div class="container mx-auto px-4">
+        <p>&copy; 2022 Tharun Construction. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Floating Contact Buttons -->
+  <div class="fixed bottom-6 right-7 flex flex-col gap-3 z-[100]">
+    <a href="https://wa.me/919177933880" target="_blank" class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition-transform">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="tel:+919177933880" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl shadow-lg hover:scale-110 transition-transform">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+    <a href="https://www.instagram.com/tharunconstruction" target="_blank" class="w-12 h-12 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition-transform">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/share/1EVgXoDYcm/" target="_blank" class="w-12 h-12 bg-[#1877F2] text-white rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition-transform">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="https://www.youtube.com/@tharunconstruction" target="_blank" class="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition-transform">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

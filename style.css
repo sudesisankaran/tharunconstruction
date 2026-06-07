@@ -1,0 +1,23 @@
+/* Custom non-Tailwind specific styles if needed */
+
+/* Add smooth scrolling to the page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom file input hover effects can be tricky with pure Tailwind without adding complex classes, handling small interactions here */
+input[type="file"] + span:hover {
+  opacity: 0.8;
+}
+
+/* Marquee Animation for Reviews */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 0.75rem)); } /* -50% of the total width minus half the gap */
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 45s linear infinite;
+}

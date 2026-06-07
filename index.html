@@ -1,0 +1,817 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tharun Construction</title>
+  <link rel="icon" type="image/png" href="images/Tharun logo (1).png">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS v3 via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#2F4D6D',
+            'secondary': '#0070B8',
+            'tertiary': '#03A7E0',
+            'accent': '#F4BF1B',
+            'dark-grey': '#665B5B',
+            'light-grey': '#F4F4F4'
+          },
+          fontFamily: {
+            'heading': ['Inter', 'sans-serif'],
+            'body': ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-body text-dark-grey bg-white">
+
+  <!-- Header -->
+  <header class="bg-white pt-10 pb-6 border-b border-gray-200">
+    <div class="container mx-auto px-4 flex flex-col items-center">
+      <a href="index.html" class="flex flex-col items-center justify-center gap-2 mb-6 hover:opacity-80 transition-opacity text-center">
+        <img src="images/Tharun logo (1).png" alt="Tharun Construction Logo" class="h-20 sm:h-24 md:h-32 object-contain">
+        <div class="flex flex-col items-center justify-center gap-1 mt-2 w-32 sm:w-48 md:w-64">
+          <img src="images/Tharun logo (2).png" alt="THARUN" class="w-full h-auto object-contain">
+          <img src="images/Tharun logo (3).png" alt="CONSTRUCTION" class="w-full h-auto object-contain">
+        </div>
+      </a>
+      <nav class="flex flex-wrap justify-center gap-4 md:gap-8 px-2 text-center">
+        <a href="index.html" class="font-heading text-sm font-semibold text-dark-grey uppercase hover:text-accent border-b-2 border-transparent hover:border-accent transition duration-300">Home</a>
+        <a href="about.html" class="font-heading text-sm font-semibold text-dark-grey uppercase hover:text-accent border-b-2 border-transparent hover:border-accent transition duration-300">About Us</a>
+        <a href="contact.html" class="font-heading text-sm font-semibold text-dark-grey uppercase hover:text-accent border-b-2 border-transparent hover:border-accent transition duration-300">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col md:flex-row min-h-[80vh]">
+    <div class="w-full md:w-1/2 min-h-[40vh] md:min-h-0 bg-cover bg-center" style="background-image: url('images/hero_bg.png');"></div>
+    <div class="flex-1 bg-primary text-white flex flex-col justify-center p-12 md:p-20">
+
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">BUILDING YOUR<br/>DREAMS WITH<br/>PRECISION</h1>
+      <p class="text-base md:text-lg mb-10 opacity-90 leading-relaxed">
+        Tharun Construction delivers comprehensive construction solutions, from custom Vastu plans and precise elevations to complete residential and commercial projects. We build with integrity, quality, and a commitment to your vision.
+      </p>
+      <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-accent text-white font-heading text-sm font-semibold uppercase tracking-widest py-3 px-8 border border-accent hover:bg-transparent hover:text-accent transition duration-300 w-fit cursor-pointer">GET A QUOTE!</button>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl text-center text-dark-grey mb-12 uppercase">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- 1. Vastu Plans -->
+        <div class="bg-primary text-white group cursor-pointer">
+          <div class="overflow-hidden h-64">
+            <img src="images/vastu_plans.png" alt="Vastu Plans" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-8 text-center flex flex-col items-center h-[calc(100%-16rem)]">
+            <h3 class="font-heading text-xl mb-4 flex-1">VASTU PLANS</h3>
+            <button onclick="openServiceModal('Vastu Plans')" class="bg-transparent text-white font-heading text-sm font-semibold uppercase tracking-widest py-2 px-6 border border-white hover:bg-white hover:text-primary transition duration-300 mt-auto cursor-pointer">LEARN MORE</button>
+          </div>
+        </div>
+
+        <!-- 8. Material Contractors -->
+        <div class="bg-primary text-white group cursor-pointer">
+          <div class="overflow-hidden h-64">
+            <img src="images/material_contractors.png" alt="Material Contractors" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-8 text-center flex flex-col items-center h-[calc(100%-16rem)]">
+            <h3 class="font-heading text-xl mb-4 flex-1">MATERIAL CONTRACTORS</h3>
+            <button onclick="openServiceModal('Material Contractors')" class="bg-transparent text-white font-heading text-sm font-semibold uppercase tracking-widest py-2 px-6 border border-white hover:bg-white hover:text-primary transition duration-300 mt-auto cursor-pointer">LEARN MORE</button>
+          </div>
+        </div>
+
+        <!-- 9. PMC -->
+        <div class="bg-primary text-white group cursor-pointer">
+          <div class="overflow-hidden h-64">
+            <img src="images/pmc.png" alt="PMC" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-8 text-center flex flex-col items-center h-[calc(100%-16rem)]">
+            <h3 class="font-heading text-xl mb-4 flex-1">PMC [ PROJECT MANAGEMENT CONSULTANT ]</h3>
+            <button onclick="openServiceModal('PMC')" class="bg-transparent text-white font-heading text-sm font-semibold uppercase tracking-widest py-2 px-6 border border-white hover:bg-white hover:text-primary transition duration-300 mt-auto cursor-pointer">LEARN MORE</button>
+          </div>
+        </div>
+
+        <!-- 4. Residential Projects -->
+        <div class="bg-primary text-white group cursor-pointer">
+          <div class="overflow-hidden h-64">
+            <img src="images/residential_projects.png" alt="Residential Projects" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-8 text-center flex flex-col items-center h-[calc(100%-16rem)]">
+            <h3 class="font-heading text-xl mb-4 flex-1">RESIDENTIAL PROJECTS</h3>
+            <button onclick="openServiceModal('Residential Projects')" class="bg-transparent text-white font-heading text-sm font-semibold uppercase tracking-widest py-2 px-6 border border-white hover:bg-white hover:text-primary transition duration-300 mt-auto cursor-pointer">LEARN MORE</button>
+          </div>
+        </div>
+
+        <!-- 7. Commercial Projects -->
+        <div class="bg-primary text-white group cursor-pointer">
+          <div class="overflow-hidden h-64">
+            <img src="images/commercial_projects.png" alt="Commercial Projects" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-8 text-center flex flex-col items-center h-[calc(100%-16rem)]">
+            <h3 class="font-heading text-xl mb-4 flex-1">COMMERCIAL PROJECTS</h3>
+            <button onclick="openServiceModal('Commercial Projects')" class="bg-transparent text-white font-heading text-sm font-semibold uppercase tracking-widest py-2 px-6 border border-white hover:bg-white hover:text-primary transition duration-300 mt-auto cursor-pointer">LEARN MORE</button>
+          </div>
+        </div>
+
+        <!-- 5. Extension Projects -->
+        <div class="bg-primary text-white group cursor-pointer">
+          <div class="overflow-hidden h-64">
+            <img src="images/extension_projects.png" alt="Extension Projects" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-8 text-center flex flex-col items-center h-[calc(100%-16rem)]">
+            <h3 class="font-heading text-xl mb-4 flex-1">EXTENTION PROJECTS</h3>
+            <button onclick="openServiceModal('Extension Projects')" class="bg-transparent text-white font-heading text-sm font-semibold uppercase tracking-widest py-2 px-6 border border-white hover:bg-white hover:text-primary transition duration-300 mt-auto cursor-pointer">LEARN MORE</button>
+          </div>
+        </div>
+
+        <!-- 2. Elevations -->
+        <div class="bg-primary text-white group cursor-pointer">
+          <div class="overflow-hidden h-64">
+            <img src="images/elevations.png" alt="Elevations" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-8 text-center flex flex-col items-center h-[calc(100%-16rem)]">
+            <h3 class="font-heading text-xl mb-4 flex-1">ELEVATIONS</h3>
+            <button onclick="openServiceModal('Elevations')" class="bg-transparent text-white font-heading text-sm font-semibold uppercase tracking-widest py-2 px-6 border border-white hover:bg-white hover:text-primary transition duration-300 mt-auto cursor-pointer">LEARN MORE</button>
+          </div>
+        </div>
+
+        <!-- 6. Renovations -->
+        <div class="bg-primary text-white group cursor-pointer">
+          <div class="overflow-hidden h-64">
+            <img src="images/renovations.png" alt="Renovations" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-8 text-center flex flex-col items-center h-[calc(100%-16rem)]">
+            <h3 class="font-heading text-xl mb-4 flex-1">RENOVATIONS</h3>
+            <button onclick="openServiceModal('Renovations')" class="bg-transparent text-white font-heading text-sm font-semibold uppercase tracking-widest py-2 px-6 border border-white hover:bg-white hover:text-primary transition duration-300 mt-auto cursor-pointer">LEARN MORE</button>
+          </div>
+        </div>
+
+        <!-- 3. Interior Designs -->
+        <div class="bg-primary text-white group cursor-pointer">
+          <div class="overflow-hidden h-64">
+            <img src="images/interior_designs.png" alt="Interior Designs" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-8 text-center flex flex-col items-center h-[calc(100%-16rem)]">
+            <h3 class="font-heading text-xl mb-4 flex-1">INTERIOR DESIGNS</h3>
+            <button onclick="openServiceModal('Interior Designs')" class="bg-transparent text-white font-heading text-sm font-semibold uppercase tracking-widest py-2 px-6 border border-white hover:bg-white hover:text-primary transition duration-300 mt-auto cursor-pointer">LEARN MORE</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-dark-grey mb-2">Why Choose Tharun Construction</h2>
+      <p class="text-lg text-gray-600 mb-16">Excellence in every aspect of construction and infrastructure development</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Premium Quality -->
+        <div class="flex flex-col items-center">
+          <div class="text-secondary text-5xl mb-6 hover:scale-110 transition-transform">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-dark-grey mb-3">Premium Quality</h3>
+          <p class="text-gray-600 leading-relaxed px-2 text-sm">Uncompromising standards in materials and craftsmanship for lasting excellence.</p>
+        </div>
+
+        <!-- Timely Delivery -->
+        <div class="flex flex-col items-center">
+          <div class="text-secondary text-5xl mb-6 hover:scale-110 transition-transform">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-dark-grey mb-3">Timely Delivery</h3>
+          <p class="text-gray-600 leading-relaxed px-2 text-sm">On-schedule completion with efficient project management and coordination.</p>
+        </div>
+
+        <!-- Expert Team -->
+        <div class="flex flex-col items-center">
+          <div class="text-secondary text-5xl mb-6 hover:scale-110 transition-transform">
+            <i class="fa-solid fa-users-gear"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-dark-grey mb-3">Expert Team</h3>
+          <p class="text-gray-600 leading-relaxed px-2 text-sm">Skilled professionals with decades of experience in premium construction.</p>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Ongoing Projects Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+        <div>
+          <h2 class="font-heading text-3xl md:text-4xl text-left font-extrabold text-dark-grey mb-2 uppercase">Ongoing Projects</h2>
+          <p class="text-lg text-gray-600">Take a look at what we are building right now</p>
+        </div>
+        <a href="gallery.html" class="bg-primary text-white font-heading text-sm font-semibold uppercase tracking-widest py-3 px-8 hover:bg-dark-grey transition duration-300 w-fit cursor-pointer inline-block text-center">VIEW ALL</a>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Project 1 -->
+        <div class="bg-white group cursor-pointer overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="overflow-hidden h-72">
+            <img src="images/ourservices/IMG-20251101-WA0015.jpg" alt="Residential Construction" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-heading font-bold text-secondary uppercase tracking-widest">Residential</span>
+              <span class="bg-accent text-white text-xs font-bold px-2 py-1 rounded">In Progress</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-dark-grey mb-2">Modern Villa Construction</h3>
+            <p class="text-gray-600 text-sm">Framing and structural concrete phase currently underway for this luxury residence.</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-white group cursor-pointer overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="overflow-hidden h-72">
+            <img src="images/ourservices/IMG-20251101-WA0016.jpg" alt="Commercial Site" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-heading font-bold text-secondary uppercase tracking-widest">Commercial</span>
+              <span class="bg-accent text-white text-xs font-bold px-2 py-1 rounded">In Progress</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-dark-grey mb-2">Office Complex Hub</h3>
+            <p class="text-gray-600 text-sm">Steel beam erection and crane operations actively advancing on site.</p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-white group cursor-pointer overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="overflow-hidden h-72">
+            <img src="images/ourservices/IMG-20260511-WA0011.jpg" alt="Interior Renovation" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-heading font-bold text-secondary uppercase tracking-widest">Renovation</span>
+              <span class="bg-accent text-white text-xs font-bold px-2 py-1 rounded">In Progress</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-dark-grey mb-2">Complete Interior Refit</h3>
+            <p class="text-gray-600 text-sm">Drywall installation and custom structural framing approaching completion.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Completed Projects Section -->
+  <section id="portfolio" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl text-center text-dark-grey mb-12 uppercase">Completed Projects</h2>
+      <div class="relative w-full">
+        <!-- Prev Button -->
+        <button id="slider-prev" class="absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white text-primary rounded-full shadow-xl border border-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-colors hidden md:flex">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        
+        <!-- Slider Container -->
+        <div id="completed-slider" class="flex overflow-x-auto gap-6 snap-x snap-mandatory pb-8 scroll-smooth" style="scrollbar-width: none; -ms-overflow-style: none;">
+          <style>#completed-slider::-webkit-scrollbar { display: none; }</style>
+          
+          <!-- Project 1 -->
+          <div class="bg-white group cursor-pointer overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 rounded-lg min-w-[85vw] md:min-w-[calc(33.333%-1rem)] snap-start shrink-0">
+            <div class="overflow-hidden h-64 relative">
+              <img src="images/completed%20projects/IMG-20200924-WA0010.jpg%20(1).jpeg" alt="Completed Project" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <i class="fa-solid fa-magnifying-glass-plus text-white text-4xl"></i>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Project 2 -->
+          <div class="bg-white group cursor-pointer overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 rounded-lg min-w-[85vw] md:min-w-[calc(33.333%-1rem)] snap-start shrink-0">
+            <div class="overflow-hidden h-64 relative">
+              <img src="images/completed%20projects/IMG-20230225-WA0008.jpg%20(1).jpeg" alt="Completed Project" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <i class="fa-solid fa-magnifying-glass-plus text-white text-4xl"></i>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Project 3 -->
+          <div class="bg-white group cursor-pointer overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 rounded-lg min-w-[85vw] md:min-w-[calc(33.333%-1rem)] snap-start shrink-0">
+            <div class="overflow-hidden h-64 relative">
+              <img src="images/completed%20projects/IMG-20240228-WA0003.jpg.jpeg" alt="Completed Project" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <i class="fa-solid fa-magnifying-glass-plus text-white text-4xl"></i>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Project 4 -->
+          <div class="bg-white group cursor-pointer overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 rounded-lg min-w-[85vw] md:min-w-[calc(33.333%-1rem)] snap-start shrink-0">
+            <div class="overflow-hidden h-64 relative">
+              <img src="images/completed%20projects/WhatsApp%20Image%202026-05-14%20at%209.23.14%20AM%20(2).jpeg" alt="Completed Project" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <i class="fa-solid fa-magnifying-glass-plus text-white text-4xl"></i>
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+        <!-- Next Button -->
+        <button id="slider-next" class="absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white text-primary rounded-full shadow-xl border border-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-colors hidden md:flex">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Reviews Section -->
+  <section class="py-20 bg-white overflow-hidden relative">
+    <div class="container mx-auto px-4 mb-16 relative z-10">
+      <h2 class="font-heading text-3xl md:text-4xl text-center font-extrabold uppercase tracking-widest text-dark-grey">CLIENT REVIEWS</h2>
+      <p class="text-center mt-4 text-gray-500 max-w-2xl mx-auto">Hear what our satisfied clients have to say about their experience building with Tharun Construction.</p>
+    </div>
+    
+    <div class="relative w-full overflow-hidden flex group z-10 py-4">
+      <!-- Gradient masks for smooth fade effect at edges -->
+      <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none"></div>
+      <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none"></div>
+      
+      <!-- Scrolling Track -->
+      <div class="animate-marquee flex gap-6 px-6 group-hover:[animation-play-state:paused]">
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"Tharun Construction transformed our vision into reality. Their attention to detail in our residential project was absolutely phenomenal."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Rajesh K.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"We hired them for a commercial renovation and they exceeded all expectations. Delivered on time and within budget."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Priya M.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"The Vastu planning was spot on. Our new home feels incredibly peaceful and harmoniously designed."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Suresh Babu</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"Highly professional team. The material quality they use is top-notch, exactly as promised from day one."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Anita R.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"From planning to execution, Tharunpathy was personally involved. The transparency gave us immense peace of mind."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Karthik V.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"Beautiful interior designs! They totally revamped our kitchen and living room to look like a modern luxury villa."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Lakshmi N.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"Their PMC services saved us a lot of money and time. Very organized and efficient project management."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Manoj D.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"We were worried about building our first home, but Tharun Construction made the entire process smooth and stress-free."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Deepika S.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"Excellent elevations! Our commercial building stands out in Krishnagiri. 100% satisfied with the architectural work."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Vikram P.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"Great communication throughout the project. We always knew what was happening at every stage of construction."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Sangeetha T.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"The structural integrity and finish of our new office space is exceptional. True masters of their craft."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Ananthan R.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"They handled everything from obtaining permits to the final coat of paint. A true end-to-end building solution."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Geetha K.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"I highly recommend Tharun Construction for any extension projects. They seamlessly integrated the new rooms with our old house."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Ram Charan</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"Very accommodating to our changes during construction. They truly prioritize client satisfaction over everything."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Kavya P.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"A trustworthy contractor is hard to find, but Tharunpathy and his team are honest, hardworking, and incredibly skilled."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Dinesh M.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"Tharun Construction transformed our vision into reality. Their attention to detail in our residential project was absolutely phenomenal."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Rajesh K.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"We hired them for a commercial renovation and they exceeded all expectations. Delivered on time and within budget."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Priya M.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"The Vastu planning was spot on. Our new home feels incredibly peaceful and harmoniously designed."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Suresh Babu</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"Highly professional team. The material quality they use is top-notch, exactly as promised from day one."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Anita R.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"From planning to execution, Tharunpathy was personally involved. The transparency gave us immense peace of mind."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Karthik V.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"Beautiful interior designs! They totally revamped our kitchen and living room to look like a modern luxury villa."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Lakshmi N.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"Their PMC services saved us a lot of money and time. Very organized and efficient project management."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Manoj D.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"We were worried about building our first home, but Tharun Construction made the entire process smooth and stress-free."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Deepika S.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"Excellent elevations! Our commercial building stands out in Krishnagiri. 100% satisfied with the architectural work."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Vikram P.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"Great communication throughout the project. We always knew what was happening at every stage of construction."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Sangeetha T.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"The structural integrity and finish of our new office space is exceptional. True masters of their craft."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Ananthan R.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"They handled everything from obtaining permits to the final coat of paint. A true end-to-end building solution."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Geetha K.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"I highly recommend Tharun Construction for any extension projects. They seamlessly integrated the new rooms with our old house."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Ram Charan</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"Very accommodating to our changes during construction. They truly prioritize client satisfaction over everything."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Kavya P.</p>
+        </div>
+        <div class="w-80 bg-white text-dark-grey p-8 shadow-lg flex-shrink-0 flex flex-col justify-between border-b-4 border-accent rounded-sm">
+          <div>
+            <div class="flex text-accent mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="italic text-sm leading-relaxed mb-6">"A trustworthy contractor is hard to find, but Tharunpathy and his team are honest, hardworking, and incredibly skilled."</p>
+          </div>
+          <p class="font-heading font-bold uppercase text-xs tracking-wider text-primary">- Dinesh M.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row gap-12">
+      
+      <!-- Contact Form -->
+      <div class="flex-1">
+        <h2 class="font-heading text-3xl md:text-4xl text-left text-dark-grey mb-8 uppercase">CONTACT US</h2>
+        <form id="whatsapp-form" class="flex flex-col gap-5">
+          <input id="wa-name" type="text" placeholder="Name" class="w-full p-4 border border-gray-300 focus:outline-none focus:border-primary font-body">
+          <input id="wa-email" type="email" placeholder="Email*" class="w-full p-4 border border-gray-300 focus:outline-none focus:border-primary font-body" required>
+          <input id="wa-phone" type="tel" placeholder="Phone" class="w-full p-4 border border-gray-300 focus:outline-none focus:border-primary font-body">
+          <textarea id="wa-project" placeholder="Tell us about your project..." class="w-full p-4 border border-gray-300 focus:outline-none focus:border-primary font-body min-h-[150px] resize-y"></textarea>
+          
+          <label class="flex items-center gap-2 cursor-pointer w-fit">
+            <input type="file" class="hidden">
+            <span class="text-accent font-semibold">+ Attach Files</span>
+          </label>
+          
+          <button type="submit" class="bg-primary text-white font-heading text-sm font-semibold uppercase tracking-widest py-3 px-8 border border-primary hover:bg-transparent hover:text-primary transition duration-300 w-fit mt-2">SEND</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="flex-1 p-10 flex flex-col justify-center">
+        <h3 class="font-heading text-2xl text-primary mb-5 uppercase">PROJECT INQUIRIES</h3>
+        <p class="text-dark-grey mb-8 leading-relaxed">
+          Ready to start your next remodeling project? Contact us today for a consultation. 
+          Our team of experts is here to help you bring your vision to life.
+        </p>
+        
+        <div class="mb-6">
+          <h4 class="font-heading text-lg mb-2 uppercase font-semibold">THARUN CONSTRUCTION</h4>
+          <p class="text-dark-grey font-semibold mb-1">Prop. - THARUNPATHY</p>
+          <p class="text-dark-grey mb-2 leading-relaxed">3/153, Azad Nagar, Adjacent to Bharat Wayment,<br>Bangalore Highway, Krishnagiri - 02.</p>
+          <p class="text-dark-grey text-sm italic mt-2">Company started at aprox July 2022</p>
+        </div>
+        
+        <div class="mt-8 bg-white rounded-2xl p-6 shadow-md border-l-8 border-accent">
+          <div class="flex items-center gap-4 mb-4 pb-4 border-b border-gray-200">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent text-xl shadow-sm">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div>
+              <strong class="font-heading text-sm text-dark-grey uppercase tracking-widest block mb-1">Mobile / WhatsApp</strong>
+              <a href="tel:+919177933880" class="text-accent font-extrabold text-xl hover:underline tracking-wider">+91 91779 33880</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent text-xl shadow-sm">
+              <i class="fa-solid fa-envelope-open-text"></i>
+            </div>
+            <div>
+              <strong class="font-heading text-sm text-dark-grey uppercase tracking-widest block mb-1">Email</strong>
+              <a href="mailto:tharunconstruction05@gmail.com" class="text-accent font-bold text-lg hover:underline break-all">tharunconstruction05@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark-grey text-white">
+    <div class="container mx-auto px-4 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        
+        <!-- Location -->
+        <div class="md:col-span-2">
+          <h4 class="font-heading text-lg text-accent mb-5 uppercase tracking-widest">LOCATION</h4>
+          <div class="w-full h-64 bg-white">
+            <iframe 
+              src="https://www.google.com/maps?q=3/153,+Azad+Nagar,+Bangalore+Highway,+Krishnagiri&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Subscribe -->
+        <div>
+          <h4 class="font-heading text-lg text-accent mb-5 uppercase tracking-widest">SUBSCRIBE & FOLLOW</h4>
+          <div class="flex flex-col gap-3">
+            <a href="https://www.youtube.com/@tharunconstruction" target="_blank" class="bg-red-600 text-white font-heading text-sm font-semibold uppercase tracking-widest py-3 px-6 hover:bg-white hover:text-red-600 transition duration-300 flex items-center justify-center gap-2 shadow-md">
+              <i class="fa-brands fa-youtube text-lg"></i> SUBSCRIBE
+            </a>
+            <a href="https://www.instagram.com/tharunconstruction" target="_blank" class="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white font-heading text-sm font-semibold uppercase tracking-widest py-3 px-6 hover:opacity-90 transition duration-300 flex items-center justify-center gap-2 shadow-md">
+              <i class="fa-brands fa-instagram text-lg"></i> FOLLOW US
+            </a>
+            <a href="https://www.facebook.com/share/1EVgXoDYcm/" target="_blank" class="bg-[#1877F2] text-white font-heading text-sm font-semibold uppercase tracking-widest py-3 px-6 hover:opacity-90 transition duration-300 flex items-center justify-center gap-2 shadow-md">
+              <i class="fa-brands fa-facebook text-lg"></i> LIKE US
+            </a>
+          </div>
+        </div>
+
+        <!-- Follow Us -->
+        <div>
+          <h4 class="font-heading text-lg text-accent mb-5 uppercase tracking-widest">FOLLOW US</h4>
+          <div class="flex gap-4 text-xl">
+            <a href="https://wa.me/919177933880" target="_blank" class="hover:text-accent transition duration-300"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:+919177933880" class="hover:text-accent transition duration-300"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://www.instagram.com/tharunconstruction" class="hover:text-accent transition duration-300"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1EVgXoDYcm/" target="_blank" class="hover:text-accent transition duration-300"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.youtube.com/@tharunconstruction" class="hover:text-accent transition duration-300"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="bg-primary py-5 text-center text-sm text-light-grey">
+      <div class="container mx-auto px-4">
+        <p>&copy; 2022 Tharun Construction. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Floating Contact Buttons -->
+  <div class="fixed bottom-6 right-7 flex flex-col gap-3 z-[100]">
+    <a href="https://wa.me/919177933880" target="_blank" class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition-transform">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="tel:+919177933880" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl shadow-lg hover:scale-110 transition-transform">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+    <a href="https://www.instagram.com/tharunconstruction" target="_blank" class="w-12 h-12 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition-transform">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/share/1EVgXoDYcm/" target="_blank" class="w-12 h-12 bg-[#1877F2] text-white rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition-transform">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="https://www.youtube.com/@tharunconstruction" target="_blank" class="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition-transform">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+  </div>
+  <!-- Service Modal -->
+  <div id="service-modal" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+    <div class="bg-white w-[90%] md:w-3/4 lg:w-1/2 max-h-[90vh] rounded-xl shadow-2xl overflow-hidden flex flex-col transform scale-95 transition-transform duration-300" id="service-modal-content">
+      <div class="relative w-full h-48 sm:h-64 md:h-80 bg-gray-200">
+        <img id="modal-image" src="" alt="Service Image" class="w-full h-full object-cover">
+        <button id="close-modal" class="absolute top-4 right-4 w-10 h-10 bg-white text-dark-grey rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition shadow-lg z-10 cursor-pointer">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+      <div class="p-8 overflow-y-auto">
+        <h3 id="modal-title" class="font-heading text-2xl md:text-3xl text-primary font-extrabold mb-4 uppercase"></h3>
+        <div class="w-16 h-1 bg-accent mb-6"></div>
+        <p id="modal-text" class="text-dark-grey leading-relaxed text-sm md:text-base"></p>
+        <div class="mt-8">
+          <button onclick="window.open('https://wa.me/919177933880', '_blank'); document.getElementById('close-modal').click();" class="bg-primary text-white font-heading text-sm font-bold uppercase py-3 px-8 hover:bg-accent transition duration-300 cursor-pointer shadow-md">INQUIRE NOW <i class="fa-solid fa-arrow-right ml-2"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
